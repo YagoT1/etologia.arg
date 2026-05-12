@@ -9,8 +9,8 @@ import { cn } from '@/lib/utils';
 
 const NAV_BY_PATH: Record<string, Array<{ href: string; label: string }>> = {
   '/': [
-    { href: '#buttons', label: 'Botones' },
-    { href: '#cards', label: 'Cards' },
+    { href: '#servicios', label: 'Servicios' },
+    { href: '#proceso', label: 'Cómo funciona' },
     { href: '#faq', label: 'FAQ' },
   ],
 };
