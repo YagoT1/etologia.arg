@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Etología clínica con enfoque emocional",
+    "cta": "Escribir por WhatsApp"
+  }
+}

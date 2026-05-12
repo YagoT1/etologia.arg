@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+@layer base {
+  * { @apply border-border; }
+  html { @apply scroll-smooth; }
+  body { @apply bg-background text-foreground antialiased font-body; }
+  h1,h2,h3,h4 { @apply font-heading tracking-tight text-foreground; }
+  :focus-visible { @apply outline-none ring-2 ring-primary-soft ring-offset-2 ring-offset-background; }
+}
+
+@layer components {
+  .section { @apply py-section; }
+  .section-sm { @apply py-section-sm; }
+}
