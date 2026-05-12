@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Clinical ethology with an emotional approach",
+    "cta": "Contact on WhatsApp"
+  }
+}
