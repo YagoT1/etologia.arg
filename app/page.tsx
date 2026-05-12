@@ -12,7 +12,7 @@ import { SectionHeader } from '@/components/ui/section-header';
 
 export default function DesignSystemPage() {
   return (
-    <main className="section">
+    <main className="section" aria-labelledby="ds-title">
       <Container className="space-y-14">
         <SectionHeader
           eyebrow="Etología Argentina"
@@ -21,7 +21,7 @@ export default function DesignSystemPage() {
         />
 
         <section className="space-y-6">
-          <h3 className="font-heading text-2xl">1) Buttons</h3>
+          <h3 id="buttons" className="type-h3">1) Buttons</h3>
           <div className="flex flex-wrap gap-3">
             <Button>Primary</Button>
             <Button variant="secondary">Secondary</Button>
@@ -32,7 +32,7 @@ export default function DesignSystemPage() {
         </section>
 
         <section className="space-y-6">
-          <h3 className="font-heading text-2xl">2) Badges + Dividers</h3>
+          <h3 className="type-h3">2) Badges + Dividers</h3>
           <div className="flex flex-wrap items-center gap-3">
             <Badge>Premium</Badge>
             <Badge>Healthcare</Badge>
@@ -42,7 +42,7 @@ export default function DesignSystemPage() {
         </section>
 
         <section className="space-y-6">
-          <h3 className="font-heading text-2xl">3) Cards</h3>
+          <h3 id="cards" className="type-h3">3) Cards</h3>
           <Stagger>
             <div className="grid gap-5 md:grid-cols-3">
               <ServiceCard title="Service Card" description="Consultas online y acompañamiento conductual." />
@@ -53,13 +53,13 @@ export default function DesignSystemPage() {
         </section>
 
         <section className="space-y-6">
-          <h3 className="font-heading text-2xl">4) Section header + Input</h3>
+          <h3 className="type-h3">4) Section header + Input</h3>
           <SectionHeader title="Form primitives" subtitle="Inputs listos para formularios futuros." />
           <Input placeholder="Nombre y apellido" aria-label="Nombre y apellido" />
         </section>
 
         <section className="space-y-6">
-          <h3 className="font-heading text-2xl">5) Reel preview + FAQ + CTA block</h3>
+          <h3 id="faq" className="type-h3">5) Reel preview + FAQ + CTA block</h3>
           <div className="grid gap-5 md:grid-cols-2">
             <ReelPreviewCard title="Señales de estrés en perros" platform="Instagram" />
             <ReelPreviewCard title="Convivencia con gatos sensibles" platform="Instagram" />
