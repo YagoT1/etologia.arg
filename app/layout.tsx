@@ -7,12 +7,12 @@ import { PageShell } from '@/components/layout/page-shell';
 const inter = localFont({
   src: [
     {
-      path: "../public/fonts/inter/Inter-Regular.ttf",
+      path: "../public/fonts/Inter/Inter-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/inter/Inter-SemiBold.ttf",
+      path: "../public/fonts/Inter/Inter-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
@@ -23,7 +23,7 @@ const inter = localFont({
 const manrope = localFont({
   src: [
     {
-      path: "../public/fonts/manrope/Manrope-Regular.ttf",
+      path: "../public/fonts/Manrope/Manrope-Regular.ttf",
       weight: "400",
       style: "normal",
     },
