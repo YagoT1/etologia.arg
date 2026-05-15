@@ -1,5 +1,5 @@
 import { FadeIn } from '@/components/animations/fade-in';
-import { PrimaryButton } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 
 export function HeroSection() {
@@ -12,9 +12,9 @@ export function HeroSection() {
         <p className="mt-5 max-w-xl text-slate-600">
           MV Agustina Gasparini acompaña procesos conductuales con una mirada profesional, cálida y basada en evidencia.
         </p>
-        <PrimaryButton className="mt-8" href={`https://wa.me/${siteConfig.contact.whatsapp}`}>
+        <Button variant='primary' className="mt-8" href={`https://wa.me/${siteConfig.contact.whatsapp}`}>
           Consultar por WhatsApp
-        </PrimaryButton>
+        </Button>
       </FadeIn>
     </section>
   );
