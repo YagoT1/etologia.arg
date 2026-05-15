@@ -1,11 +1,35 @@
 import type { Metadata } from 'next';
-import { Inter, Manrope } from 'next/font/google';
+import localFont from 'next/font/local';
 import '@/styles/globals.css';
 import { buildMetadata } from '@/lib/seo';
 import { PageShell } from '@/components/layout/page-shell';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
-const manrope = Manrope({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
+const inter = localFont({
+  src: [
+    {
+      path: "../public/fonts/inter/Inter-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/inter/Inter-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-inter",
+})
+
+const manrope = localFont({
+  src: [
+    {
+      path: "../public/fonts/manrope/Manrope-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-manrope",
+})
 
 export const metadata: Metadata = buildMetadata();
 
