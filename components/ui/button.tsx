@@ -25,13 +25,20 @@ const variantStyles: Record<ButtonVariant, string> = {
 const sizeStyles: Record<ButtonSize, string> = {
   sm: 'h-9 px-4 text-sm',
   md: 'h-11 px-5 text-sm',
-  lg: 'h-12 px-6 text-base',
+  lg: 'min-h-12 px-6 py-3 text-base',
 };
 
-const base = 'inline-flex items-center justify-center rounded-pill font-medium transition duration-300 ease-premium focus-visible:shadow-focus disabled:opacity-60';
+const base = 'inline-flex items-center justify-center rounded-pill font-medium leading-tight transition duration-300 ease-premium focus-visible:shadow-focus disabled:opacity-60';
 
 export function Button({ children, className, variant = 'primary', size = 'md', href, type = 'button', ariaLabel }: Props) {
   const classes = cn(base, variantStyles[variant], sizeStyles[size], className);
-  if (href) return <Link href={href} aria-label={ariaLabel} className={classes}>{children}</Link>;
-  return <button type={type} aria-label={ariaLabel} className={classes}>{children}</button>;
+
+  if (!href) return <button type={type} aria-label={ariaLabel} className={classes}>{children}</button>;
+
+  const isExternal = href.startsWith('http');
+  if (isExternal) {
+    return <a href={href} aria-label={ariaLabel} className={classes}>{children}</a>;
+  }
+
+  return <Link href={href} aria-label={ariaLabel} className={classes}>{children}</Link>;
 }
