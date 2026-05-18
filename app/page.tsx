@@ -7,6 +7,9 @@ import { Container } from '@/components/ui/container';
 import { ContentCard, ServiceCard, TestimonialCard } from '@/components/ui/card';
 import { SectionHeader } from '@/components/ui/section-header';
 import { localBusinessSchema } from '@/lib/schema';
+import Image from 'next/image';
+
+
 
 const concerns = ['Agresividad', 'Ansiedad', 'Miedo', 'Estrés', 'Celos', 'Socialización'];
 const benefits = ['Mejor convivencia', 'Tranquilidad', 'Comprensión emocional', 'Vínculos saludables', 'Acompañamiento profesional'];
@@ -29,9 +32,15 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-border bg-gradient-to-br from-secondary to-background p-5 shadow-card sm:p-7">
-              <div className="aspect-[4/5] rounded-lg border border-border/80 bg-[radial-gradient(circle_at_28%_28%,rgba(168,181,162,0.58),transparent_48%),radial-gradient(circle_at_72%_64%,rgba(230,224,214,0.95),transparent_56%)]" />
-              <p className="mt-4 type-small">Espacio reservado para fotografía editorial o video cinematográfico suave del vínculo humano-animal.</p>
+            <div className="overflow-hidden rounded-xl border border-border bg-surface shadow-card">
+              <div className="relative aspect-[4/5]">
+                  <Image
+                      src="/images/img-hero.png"
+                      alt="Acompañamiento emocional y etología clínica"
+                      fill
+                      priority
+                      className="object-cover"/>
+              </div>
             </div>
           </div>
         </Container>
