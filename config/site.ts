@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: 'Etología Argentina',
   description:
-    'Etología clínica y acompañamiento conductual para familias que conviven con perros y gatos, por MV Agustina Gasparini.',
-  url: 'https://etologia-arg.vercel.app',
+    'Acompañamiento conductual y emocional entre humanos y animales por MV Agustina Gasparini.',
+  url: 'https://etologiaargentina.com',
   locale: 'es_AR',
   contact: {
-    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '',
+    whatsapp: '5490000000000',
   },
   defaultOgImage: '/og/default-og.jpg',
 };
