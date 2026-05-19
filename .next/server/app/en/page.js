@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/en/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0byvvdr._.js")
+R.c("server/chunks/ssr/0g~9_next_dist_esm_build_templates_app-page_01hk.qx.js")
+R.c("server/chunks/ssr/[root-of-the-server]__06ugbrw._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0oj-rik._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0cio_~d._.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_115pfi0._.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_builtin_forbidden_0lg_1yg.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_builtin_unauthorized_0ctzo4z.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_builtin_global-error_0js3-vm.js")
+R.c("server/chunks/ssr/Downloads_etologia_arg__next-internal_server_app_en_page_actions_0o5zc-4.js")
+R.m(22362)
+module.exports=R.m(22362).exports
