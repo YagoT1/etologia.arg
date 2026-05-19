@@ -1,0 +1,12 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0wvlxfi._.js")
+R.c("server/chunks/ssr/0g~9_next_dist_esm_build_templates_app-page_0bh4ld~.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0ren8er._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0-riqcu._.js")
+R.c("server/chunks/ssr/Downloads_etologia_arg_0a9x1c7._.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_115pfi0._.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_builtin_forbidden_0lg_1yg.js")
+R.c("server/chunks/ssr/0g~9_next_dist_client_components_builtin_unauthorized_0ctzo4z.js")
+R.c("server/chunks/ssr/Downloads_etologia_arg__next-internal_server_app__not-found_page_actions_0lsj7ff.js")
+R.m(25417)
+module.exports=R.m(25417).exports
