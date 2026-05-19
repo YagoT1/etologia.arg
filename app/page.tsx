@@ -18,7 +18,7 @@ export default function LandingPage() {
 
       <section className="section-sm pt-14 md:pt-24" id="hero">
         <Container>
-          <div className="grid items-end gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div className="grid items-end gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
             <div className="space-y-8">
               <p className="type-label text-muted-foreground/90">MV Agustina Gasparini · Etología Argentina</p>
               <h1 className="type-h1 max-w-[18ch]">Ayudo a familias a convivir mejor con sus animales.</h1>
@@ -31,7 +31,7 @@ export default function LandingPage() {
 
             <div className="relative">
               <div className="absolute -left-5 top-8 hidden h-[78%] w-px bg-border/70 lg:block" />
-              <figure className="overflow-hidden rounded-xl bg-[#e9e3d8] p-3">
+              <figure className="overflow-hidden rounded-xl border border-border/60 bg-[#e9e3d8] p-3 shadow-soft">
                 <div className="aspect-[4/5] rounded-md bg-[linear-gradient(145deg,#ebe4d8_5%,#d6dfd2_48%,#f3eee6_100%)]" />
               </figure>
               <figcaption className="mt-4 max-w-[34ch] type-small text-muted-foreground">Espacio reservado para fotografía editorial o video cinematográfico suave del vínculo humano-animal.</figcaption>
@@ -93,9 +93,11 @@ export default function LandingPage() {
       <section id="beneficios" className="section">
         <Container className="space-y-8">
           <SectionHeader title="Beneficios emocionales" subtitle="Cambios visibles en la vida cotidiana, con mayor calma y conexión." />
-          <div className="grid gap-y-4 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {benefits.map((item) => (
-              <p key={item} className="type-body border-b border-border/70 pb-3">{item}</p>
+              <article key={item} className="rounded-lg border border-border/70 bg-surface/70 px-4 py-4">
+                <p className="type-small font-medium text-foreground">{item}</p>
+              </article>
             ))}
           </div>
         </Container>
