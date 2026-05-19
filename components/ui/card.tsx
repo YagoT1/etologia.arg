@@ -1,17 +1,17 @@
 import { cn } from '@/lib/utils';
 
 export function Card({ children, className }: { children: React.ReactNode; className?: string }) {
-  return <article className={cn('rounded-xl border border-border bg-surface p-6 shadow-soft transition duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-card', className)}>{children}</article>;
+  return <article className={cn('rounded-xl border border-border/80 bg-surface p-6 transition duration-300 ease-premium hover:border-border', className)}>{children}</article>;
 }
 
 export function ServiceCard({ title, description }: { title: string; description: string }) {
-  return <Card><h3 className="text-xl">{title}</h3><p className="mt-3 text-muted-foreground">{description}</p></Card>;
+  return <Card><h3 className="type-h4">{title}</h3><p className="mt-3 type-small">{description}</p></Card>;
 }
 
 export function TestimonialCard({ quote, author }: { quote: string; author: string }) {
-  return <Card><blockquote className="text-lg leading-relaxed">“{quote}”</blockquote><p className="mt-4 text-sm text-muted-foreground">{author}</p></Card>;
+  return <article className="space-y-4 border-l border-border pl-4 sm:pl-5"><blockquote className="type-body-lg text-foreground">“{quote}”</blockquote><p className="type-small">{author}</p></article>;
 }
 
 export function ContentCard({ title, excerpt }: { title: string; excerpt: string }) {
-  return <Card><h3 className="text-lg">{title}</h3><p className="mt-2 text-sm text-muted-foreground">{excerpt}</p></Card>;
+  return <Card><h3 className="type-h4">{title}</h3><p className="mt-2 type-small">{excerpt}</p></Card>;
 }
