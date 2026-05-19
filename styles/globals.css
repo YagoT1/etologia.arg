@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+@layer base {
+  * { @apply border-border; }
+  html { @apply scroll-smooth; }
+  body { @apply bg-background text-foreground antialiased font-body type-body; }
+  h1,h2,h3,h4 { @apply font-heading text-foreground; }
+  :focus-visible { @apply outline-none ring-2 ring-primary-soft ring-offset-2 ring-offset-background; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .section { @apply py-section; }
+  .section-sm { @apply py-section-sm; }
+
+  .type-display { @apply font-heading text-display; }
+  .type-h1 { @apply font-heading text-h1; }
+  .type-h2 { @apply font-heading text-h2; }
+  .type-h3 { @apply font-heading text-h3; }
+  .type-h4 { @apply font-heading text-h4; }
+  .type-body-lg { @apply text-body-lg text-foreground; }
+  .type-body { @apply text-body text-foreground; }
+  .type-small { @apply text-small text-muted-foreground; }
+  .type-caption { @apply text-caption text-muted-foreground; }
+  .type-label { @apply text-label uppercase tracking-[0.04em] text-foreground; }
+}
