@@ -1,18 +1,12 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Inter, Manrope } from 'next/font/google';
 import '@/styles/globals.css';
 import { buildMetadata } from '@/lib/seo';
 import { PageShell } from '@/components/layout/page-shell';
 
-const inter = localFont({
-  src: '../public/fonts/Inter/Inter-Regular.ttf',
-  variable: '--font-inter',
-})
+const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
 
-const manrope = localFont({
-  src: '../public/fonts/Manrope/Manrope-Regular.ttf',
-  variable: '--font-manrope',
-})
 export const metadata: Metadata = buildMetadata();
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -18,7 +18,7 @@ export default function LandingPage() {
 
       <section className="section-sm pt-14 md:pt-24" id="hero">
         <Container>
-          <div className="grid items-end gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+          <div className="grid items-end gap-12 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16">
             <div className="space-y-8">
               <p className="type-label text-muted-foreground/90">MV Agustina Gasparini · Etología Argentina</p>
               <h1 className="type-h1 max-w-[18ch]">Ayudo a familias a convivir mejor con sus animales.</h1>
@@ -95,7 +95,7 @@ export default function LandingPage() {
           <SectionHeader title="Beneficios emocionales" subtitle="Cambios visibles en la vida cotidiana, con mayor calma y conexión." />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {benefits.map((item) => (
-              <article key={item} className="rounded-lg border border-border/70 bg-surface/70 px-4 py-4">
+              <article key={item} className="rounded-xl border border-border/70 bg-surface/75 px-4 py-4 shadow-soft">
                 <p className="type-small font-medium text-foreground">{item}</p>
               </article>
             ))}
