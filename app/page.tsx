@@ -93,9 +93,9 @@ export default function LandingPage() {
       <section id="beneficios" className="section">
         <Container className="space-y-8">
           <SectionHeader title="Beneficios del acompañamiento" subtitle="Resultados concretos que impactan en la rutina y en el bienestar de toda la familia." />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {benefits.map((item) => (
-              <article key={item} className="rounded-xl border border-border/70 bg-surface/75 px-4 py-4 shadow-soft">
+              <article key={item} className="rounded-xl border border-border/70 bg-surface/80 p-5 shadow-soft">
                 <p className="type-small font-medium text-foreground">{item}</p>
               </article>
             ))}
