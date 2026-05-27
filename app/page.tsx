@@ -299,7 +299,7 @@ export default function LandingPage() {
         </Container>
       </section>
 
-      <section id="reels" className="section">
+      <section id="reels" className="section bg-surface/60">
         <Container className="space-y-8">
           <SectionHeader
             eyebrow="Contenido breve"
@@ -318,7 +318,7 @@ export default function LandingPage() {
         </Container>
       </section>
 
-      <section id="testimonios" className="section bg-surface/70">
+      <section id="testimonios" className="section">
         <Container className="space-y-8">
           <SectionHeader
             eyebrow="Confianza"
@@ -336,7 +336,7 @@ export default function LandingPage() {
         </Container>
       </section>
 
-      <section id="faq" className="section">
+      <section id="faq" className="section bg-surface/60">
         <Container className="space-y-8">
           <SectionHeader
             eyebrow="Antes de escribir"
