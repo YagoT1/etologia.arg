@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Inter, Manrope } from 'next/font/google';
 import '@/styles/globals.css';
 import { buildMetadata } from '@/lib/seo';
 import { PageShell } from '@/components/layout/page-shell';
