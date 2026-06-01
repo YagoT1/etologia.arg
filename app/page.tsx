@@ -178,11 +178,11 @@ export default function LandingPage() {
 
       <section id="casos" className="section bg-surface/70">
         <Container className="space-y-8">
-          <SectionHeader
-            eyebrow="Casos frecuentes"
-            title="No es “portarse mal”. Es una señal que necesita contexto."
-            subtitle="La conducta aparece en una escena concreta: una puerta que se cierra, una visita que entra, otro animal que se acerca, una rutina que cambió. El trabajo empieza por leer esa escena con precisión."
-          />
+        <SectionHeader
+          eyebrow="Interpretación clínica"
+          title="La conducta es una señal. El desafío es entender qué la está produciendo."
+          subtitle="Ansiedad, miedo, agresividad o conflictos de convivencia pueden parecer problemas distintos. Muchas veces comparten factores médicos, emocionales, ambientales o familiares. El trabajo empieza por identificar qué está influyendo en cada caso antes de decidir cómo intervenir."
+        />
           <div className="grid gap-4 md:grid-cols-2">
             {cases.map((item) => (
               <article key={item.title} className="rounded-xl border border-border bg-background p-5 shadow-soft">
@@ -194,35 +194,74 @@ export default function LandingPage() {
         </Container>
       </section>
 
-      <section id="agustina" className="section">
-        <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
-            <p className="type-label text-muted-foreground">Quién te acompaña</p>
-            <h2 className="mt-3 type-h2">MV Agustina Gasparini</h2>
-            <p className="mt-4 type-body-lg text-muted-foreground">
-              Trabajo desde la medicina veterinaria y la etología clínica para entender la conducta sin culpar al animal ni a la familia. Mi rol es traducir lo que está pasando, ordenar prioridades y cuidar el vínculo mientras abordamos el problema.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <div className="rounded-xl border border-border bg-primary p-6 text-primary-foreground shadow-card">
-              <h3 className="type-h4 text-primary-foreground">Criterio clínico + sensibilidad familiar</h3>
-              <p className="mt-3 text-primary-foreground/80">
-                Un cambio de conducta puede involucrar dolor, miedo, aprendizaje, ambiente, manejo, edad, estrés o dinámica familiar. Por eso la consulta no empieza con una receta: empieza con preguntas buenas.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-border bg-surface p-5">
-                <p className="type-label text-muted-foreground">Enfoque</p>
-                <p className="mt-2 font-medium">Evaluación integral, prevención de riesgos y pautas realistas.</p>
+          <section id="agustina" className="section">
+            <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div className="rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
+                <p className="type-label text-muted-foreground">
+                  Dirección clínica del caso
+                </p>
+
+                <h2 className="mt-3 type-h2">
+                  MV Agustina Gasparini
+                </h2>
+
+                <p className="mt-3 text-sm font-medium text-foreground">
+                  Medicina veterinaria + etología clínica
+                </p>
+
+                <p className="mt-4 type-body-lg text-muted-foreground">
+                  Trabajo desde la medicina veterinaria y la etología clínica para
+                  interpretar conductas complejas, identificar factores relevantes y
+                  ordenar prioridades de intervención con criterio clínico.
+                </p>
+
+                <p className="mt-4 text-muted-foreground">
+                  Mi rol no es ofrecer respuestas rápidas ni recetas universales. Es
+                  comprender qué está ocurriendo, evaluar el contexto completo y orientar
+                  decisiones seguras para el animal y su familia.
+                </p>
               </div>
-              <div className="rounded-xl border border-border bg-surface p-5">
-                <p className="type-label text-muted-foreground">Modalidad</p>
-                <p className="mt-2 font-medium">Consultas online y encuentros presenciales según el caso.</p>
+
+              <div className="space-y-4">
+                <div className="rounded-xl border border-border bg-primary p-6 text-primary-foreground shadow-card">
+                  <h3 className="type-h4 text-primary-foreground">
+                    Criterio clínico + sensibilidad familiar
+                  </h3>
+
+                  <p className="mt-3 text-primary-foreground/80">
+                    Un cambio de conducta puede involucrar dolor, miedo, aprendizaje,
+                    ambiente, manejo, edad, estrés o dinámica familiar. Por eso cada caso
+                    requiere una evaluación integral antes de definir pautas o tomar
+                    decisiones.
+                  </p>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-xl border border-border bg-surface p-5">
+                    <p className="type-label text-muted-foreground">
+                      Enfoque clínico
+                    </p>
+
+                    <p className="mt-2 font-medium">
+                      Evaluación integral, prevención de riesgos y pautas realistas para
+                      cada situación.
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-border bg-surface p-5">
+                    <p className="type-label text-muted-foreground">
+                      Modalidad
+                    </p>
+
+                    <p className="mt-2 font-medium">
+                      Consultas online y encuentros presenciales según las necesidades del
+                      caso.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+            </Container>
+          </section>
 
       <section id="consulta" className="section bg-surface/70">
         <Container className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
@@ -243,11 +282,11 @@ export default function LandingPage() {
 
       <section id="metodo" className="section">
         <Container className="space-y-8">
-          <SectionHeader
-            eyebrow="Cómo trabajamos"
-            title="Un proceso claro para bajar ansiedad y tomar mejores decisiones"
-            subtitle="La familia necesita entender qué hacer, qué evitar y cuándo pedir ayuda adicional. El plan se construye con criterio clínico y con la realidad cotidiana sobre la mesa."
-          />
+        <SectionHeader
+          eyebrow="Criterio clínico"
+          title="Cada decisión parte de una evaluación, no de una receta"
+          subtitle="La conducta puede estar influida por factores médicos, emocionales, ambientales y familiares. Por eso el trabajo sigue una secuencia de evaluación y toma de decisiones antes de definir cualquier intervención."
+        />
           <ol className="grid gap-4 md:grid-cols-2">
             {process.map((item) => (
               <li key={item.step} className="rounded-xl border border-border bg-surface p-5 shadow-soft">
@@ -284,11 +323,11 @@ export default function LandingPage() {
 
       <section id="beneficios" className="section bg-surface/70">
         <Container className="space-y-8">
-          <SectionHeader
-            eyebrow="Beneficios"
-            title="Qué cambia cuando el caso se aborda con criterio clínico"
-            subtitle="Resultados esperables y sostenibles para una convivencia más clara, segura y estable."
-          />
+        <SectionHeader
+            eyebrow="Impacto clínico"
+            title="Qué suele cambiar cuando existe una lectura clínica adecuada"
+            subtitle="Cuando se identifican los factores que están influyendo en la conducta, las decisiones dejan de basarse en prueba y error. El objetivo no es buscar soluciones mágicas, sino construir cambios sostenibles y más seguros para el animal y su familia."
+        />
           <div className="grid gap-4 md:grid-cols-2">
             {benefits.map((item) => (
               <article key={item} className="rounded-xl border border-border/80 bg-background/80 p-6 shadow-soft">
