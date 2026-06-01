@@ -156,10 +156,6 @@ export default function LandingPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -bottom-5 -left-5 hidden rounded-xl bg-primary px-5 py-4 text-primary-foreground shadow-card md:block">
-                <p className="text-sm font-medium">Mirada clínica, sin recetas universales.</p>
-                <p className="mt-1 text-xs text-primary-foreground/70">Cada familia necesita un plan que pueda sostener.</p>
-              </div>
               <div className="overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-card">
                 <div className="relative aspect-[4/5]">
                   <Image
