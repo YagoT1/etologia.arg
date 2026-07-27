@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "incremental": false, "skipLibCheck": true },
+  "include": [
+    "app/(site)/blog/page.tsx",
+    "app/(site)/blog/[slug]/page.tsx",
+    "app/sitemap.ts",
+    "sanity/queries.ts",
+    "sanity/lib.client.ts",
+    "sanity/lib.image.ts",
+    "sanity/env.ts",
+    "lib/**/*.ts",
+    "config/**/*.ts",
+    "types/**/*.ts",
+    "components/ui/breadcrumbs.tsx",
+    "components/ui/container.tsx",
+    "components/ui/button.tsx",
+    "components/sections/portable-text.tsx"
+  ],
+  "exclude": ["node_modules"]
+}

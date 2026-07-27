@@ -6,8 +6,10 @@ const defaultWhatsAppMessage = [
   'El animal es un perro/gato y lo que más me preocupa es:',
 ].join('\n');
 
+/**
+ * Construye el enlace a WhatsApp. El número está validado en `lib/env.ts`,
+ * por lo que este helper siempre devuelve un enlace válido (sin fallback silencioso).
+ */
 export function buildWhatsAppUrl(message = defaultWhatsAppMessage) {
-  if (!siteConfig.contact.whatsapp) return '/contact';
-
   return `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(message)}`;
 }

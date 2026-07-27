@@ -1,6 +1,2 @@
-import { i18nConfig, type Locale } from '@/config/i18n';
-
-export async function getMessages(locale: Locale) {
-  if (!i18nConfig.locales.includes(locale)) return import('@/messages/es.json');
-  return import(`@/messages/${locale}.json`);
-}
+// DEPRECADO: el sitio es monolingüe (es-AR). Sin uso. Eliminar con git rm (ver config/i18n.ts).
+export {};

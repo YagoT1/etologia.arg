@@ -1,3 +1,6 @@
-export default function EnglishLandingPage() {
-  return <section className="container py-16"><h1 className="text-3xl font-semibold">Etología Argentina (EN)</h1></section>;
+import { redirect } from 'next/navigation';
+
+// El sitio es monolingüe (es-AR). La ruta /en se mantiene por compatibilidad y redirige al inicio.
+export default function EnglishRedirect() {
+  redirect('/');
 }

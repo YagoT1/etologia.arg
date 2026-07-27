@@ -1,5 +1,2 @@
-import { i18nConfig } from '@/config/i18n';
-
-export function useDefaultLocale() {
-  return i18nConfig.defaultLocale;
-}
+// DEPRECADO: el sitio es monolingüe (es-AR). Sin uso. Eliminar con git rm (ver config/i18n.ts).
+export {};

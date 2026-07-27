@@ -6,11 +6,22 @@ export const localBusinessSchema = {
   name: siteConfig.name,
   description: siteConfig.description,
   url: siteConfig.url,
-  areaServed: 'Argentina',
+  image: `${siteConfig.url}/opengraph-image`,
+  areaServed: { '@type': 'Country', name: 'Argentina' },
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    serviceUrl: siteConfig.url,
+    availableLanguage: { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
+  },
   founder: {
     '@type': 'Person',
-    name: 'MV Agustina Gasparini',
-    jobTitle: 'Médica Veterinaria · Etología clínica',
+    name: siteConfig.author.name,
+    jobTitle: siteConfig.author.jobTitle,
+  },
+  provider: {
+    '@type': 'Person',
+    name: siteConfig.author.name,
+    jobTitle: siteConfig.author.jobTitle,
   },
   serviceType: [
     'Etología clínica',

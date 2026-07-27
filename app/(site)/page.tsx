@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { CtaBlock, MobileStickyCta } from '@/components/sections/cta-block';
 import { FaqAccordion } from '@/components/sections/faq-accordion';
@@ -6,7 +7,10 @@ import { Container } from '@/components/ui/container';
 import { Badge } from '@/components/ui/badge';
 import { SectionHeader } from '@/components/ui/section-header';
 import { buildWhatsAppUrl } from '@/lib/contact';
+import { buildMetadata } from '@/lib/seo';
 import { localBusinessSchema } from '@/lib/schema';
+
+export const metadata: Metadata = buildMetadata({ path: '/' });
 
 const cases = [
   {
@@ -157,13 +161,15 @@ export default function LandingPage() {
 
             <div className="relative">
               <div className="overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-card">
-                <div className="relative aspect-[4/5]">
+                <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/img-hero.png"
-                    alt="Etología clínica y acompañamiento conductual para familias con animales"
+                    src="/images/img-hero.webp"
+                    alt="MV Agustina Gasparini, médica veterinaria especializada en etología clínica, acompañando a un perro en un entorno familiar y calmo"
                     fill
                     priority
-                    className="object-cover"
+                    fetchPriority="high"
+                    sizes="(max-width: 1024px) 100vw, 48vw"
+                    className="object-cover object-center"
                   />
                 </div>
               </div>
@@ -224,7 +230,7 @@ export default function LandingPage() {
                     Criterio clínico + sensibilidad familiar
                   </h3>
 
-                  <p className="mt-3 text-primary-foreground/80">
+                  <p className="mt-3 text-primary-foreground">
                     Un cambio de conducta puede involucrar dolor, miedo, aprendizaje,
                     ambiente, manejo, edad, estrés o dinámica familiar. Por eso cada caso
                     requiere una evaluación integral antes de definir pautas o tomar

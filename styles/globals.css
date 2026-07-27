@@ -9,7 +9,8 @@
   html { @apply scroll-smooth; }
   body { @apply bg-background text-foreground antialiased font-body type-body; }
   h1,h2,h3,h4 { @apply font-heading text-foreground; }
-  :focus-visible { @apply outline-none ring-2 ring-primary-soft ring-offset-2 ring-offset-background; }
+  :focus-visible { @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background; }
+  /* Indicador de foco accesible (WCAG 2.2 · 2.4.11/1.4.11 ≥ 3:1). primary = 6.5:1 sobre el fondo. */
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {

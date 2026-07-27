@@ -1,22 +1,11 @@
 import { sanityClient } from './lib.client';
+import type { BlogPost, BlogPostSummary } from '@/types/cms';
 
-export type BlogPost = {
-  title: string;
-  slug: string;
-  excerpt?: string;
-  body?: any[];
-  featuredImage?: {
-    asset?: {
-      _ref: string;
-    };
-  };
-  publishedAt?: string;
-  seoTitle?: string;
-  seoDescription?: string;
-};
+// Revalidación incremental (ISR): el contenido publicado se refresca cada 60 s.
+const REVALIDATE_SECONDS = 60;
 
 const POSTS_QUERY = `
-  *[_type == "post"]
+  *[_type == "post" && defined(slug.current)]
   | order(publishedAt desc)
   {
     title,
@@ -41,12 +30,16 @@ const POST_BY_SLUG_QUERY = `
   }
 `;
 
-export async function getPosts(): Promise<BlogPost[]> {
-  return sanityClient.fetch(POSTS_QUERY);
+const POST_SLUGS_QUERY = `*[_type == "post" && defined(slug.current)].slug.current`;
+
+export async function getPosts(): Promise<BlogPostSummary[]> {
+  return sanityClient.fetch(POSTS_QUERY, {}, { next: { revalidate: REVALIDATE_SECONDS, tags: ['post'] } });
 }
 
-export async function getPostBySlug(
-  slug: string
-): Promise<BlogPost | null> {
-  return sanityClient.fetch(POST_BY_SLUG_QUERY, { slug });
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  return sanityClient.fetch(POST_BY_SLUG_QUERY, { slug }, { next: { revalidate: REVALIDATE_SECONDS, tags: ['post', `post:${slug}`] } });
+}
+
+export async function getPostSlugs(): Promise<string[]> {
+  return sanityClient.fetch(POST_SLUGS_QUERY, {}, { next: { revalidate: REVALIDATE_SECONDS, tags: ['post'] } });
 }

@@ -12,6 +12,8 @@ type Props = {
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   ariaLabel?: string;
+  onClick?: () => void;
+  disabled?: boolean;
 };
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -28,17 +30,48 @@ const sizeStyles: Record<ButtonSize, string> = {
   lg: 'min-h-12 px-6 py-3 text-base',
 };
 
-const base = 'inline-flex items-center justify-center rounded-pill font-medium leading-tight transition duration-300 ease-premium focus-visible:shadow-focus disabled:opacity-60';
+const base =
+  'inline-flex items-center justify-center rounded-pill font-medium leading-tight transition duration-300 ease-premium focus-visible:shadow-focus disabled:pointer-events-none disabled:opacity-60';
 
-export function Button({ children, className, variant = 'primary', size = 'md', href, type = 'button', ariaLabel }: Props) {
+export function Button({
+  children,
+  className,
+  variant = 'primary',
+  size = 'md',
+  href,
+  type = 'button',
+  ariaLabel,
+  onClick,
+  disabled,
+}: Props) {
   const classes = cn(base, variantStyles[variant], sizeStyles[size], className);
 
-  if (!href) return <button type={type} aria-label={ariaLabel} className={classes}>{children}</button>;
+  if (!href) {
+    return (
+      <button type={type} aria-label={ariaLabel} onClick={onClick} disabled={disabled} className={classes}>
+        {children}
+      </button>
+    );
+  }
 
   const isExternal = href.startsWith('http');
   if (isExternal) {
-    return <a href={href} aria-label={ariaLabel} className={classes}>{children}</a>;
+    return (
+      <a
+        href={href}
+        aria-label={ariaLabel}
+        className={classes}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
+    );
   }
 
-  return <Link href={href} aria-label={ariaLabel} className={classes}>{children}</Link>;
+  return (
+    <Link href={href} aria-label={ariaLabel} className={classes}>
+      {children}
+    </Link>
+  );
 }

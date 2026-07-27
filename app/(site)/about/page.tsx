@@ -1,11 +1,22 @@
+import type { Metadata } from 'next';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { buildWhatsAppUrl } from '@/lib/contact';
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Sobre mí',
+  description:
+    'MV Agustina Gasparini, médica veterinaria especializada en etología clínica. Acompañamiento conductual para perros y gatos con mirada clínica y humana.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   return (
     <section className="section-sm">
       <Container className="max-w-3xl">
+        <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Sobre mí', href: '/about' }]} />
         <p className="type-label text-muted-foreground">Sobre mí</p>
         <h1 className="mt-4 type-h1">MV Agustina Gasparini</h1>
         <p className="mt-5 type-body-lg text-muted-foreground">
