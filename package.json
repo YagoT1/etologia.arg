@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@portabletext/react": "^6.2.0",
     "framer-motion": "^11.2.12",
     "next": "15.5.18",
     "next-sanity": "^9.12.3",
